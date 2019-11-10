@@ -5,7 +5,7 @@ import { Text, View, Image, YellowBox } from 'react-native';
 YellowBox.ignoreWarnings(['Warning: ...']);
 console.disableYellowBox = true;
 
-const Glasses = ({
+const Dog = ({
   face: {
     bounds: {
       size: { width: faceWidth, height: faceHeight }
@@ -14,8 +14,8 @@ const Glasses = ({
     rightEyePosition
   }
 }) => {
-  const glassesWidth = faceWidth
-  const glassesHeight = faceHeight / 3
+  const dogWidth = faceWidth
+  const dogHeight = faceHeight
   const transformAngle = (
     angleRad = Math.atan(
       (rightEyePosition.y - leftEyePosition.y) /
@@ -25,14 +25,14 @@ const Glasses = ({
   return (
     <View style={{
       position: 'absolute',
-      left: leftEyePosition.x - glassesWidth * 0.7,
-      top: leftEyePosition.y - glassesHeight * 0.4
+      left: leftEyePosition.x - dogWidth * 0.7,
+      top: leftEyePosition.y - dogHeight * 0.4
     }}>
       <Image
-        source={require('../../assets/sunglasses.png')}
+        source={require('../../assets/dog.png')}
         style={{
-          width: glassesWidth,
-          height: glassesHeight,
+          width: dogWidth,
+          height: dogHeight,
           resizeMode: 'contain',
           transform: [{ rotate: `${transformAngle()}deg`}]
         }}
@@ -41,4 +41,4 @@ const Glasses = ({
   );
 };
 
-export default Glasses
+export default Dog

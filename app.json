@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "hello",
-    "slug": "test",
+    "name": "cameraandroid",
+    "slug": "camera",
+    "icon": "./assets/icon.png",
     "privacy": "public",
     "sdkVersion": "35.0.0",
     "platforms": [
@@ -10,21 +11,12 @@
       "web"
     ],
     "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+    "android": {
+      "package": "com.uit.camerafilter"
     },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
     "ios": {
-      "supportsTablet": true
-    }
+      "bundleIdentifier": "com.uit.camerafilter"
+    },
+    "description": "demo"
   }
 }

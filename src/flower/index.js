@@ -5,7 +5,7 @@ import { Text, View, Image, YellowBox } from 'react-native';
 YellowBox.ignoreWarnings(['Warning: ...']);
 console.disableYellowBox = true;
 
-const Glasses = ({
+const Flower = ({
   face: {
     bounds: {
       size: { width: faceWidth, height: faceHeight }
@@ -14,8 +14,8 @@ const Glasses = ({
     rightEyePosition
   }
 }) => {
-  const glassesWidth = faceWidth
-  const glassesHeight = faceHeight / 3
+  const flowerWidth = faceWidth * 1.2
+  const flowerHeight = faceHeight / 2.5
   const transformAngle = (
     angleRad = Math.atan(
       (rightEyePosition.y - leftEyePosition.y) /
@@ -25,14 +25,14 @@ const Glasses = ({
   return (
     <View style={{
       position: 'absolute',
-      left: leftEyePosition.x - glassesWidth * 0.7,
-      top: leftEyePosition.y - glassesHeight * 0.4
+      left: leftEyePosition.x - flowerWidth * 0.7,
+      top: leftEyePosition.y - flowerHeight * 1.3
     }}>
       <Image
-        source={require('../../assets/sunglasses.png')}
+        source={require('../../assets/flower.png')}
         style={{
-          width: glassesWidth,
-          height: glassesHeight,
+          width: flowerWidth,
+          height: flowerHeight,
           resizeMode: 'contain',
           transform: [{ rotate: `${transformAngle()}deg`}]
         }}
@@ -41,4 +41,4 @@ const Glasses = ({
   );
 };
 
-export default Glasses
+export default Flower

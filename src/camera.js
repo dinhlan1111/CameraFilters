@@ -16,10 +16,11 @@ const flexCenterStyle = { flex: 1, justifyContent: 'center', alignItems: 'center
 import styles from './styles';
 
 
-import Nose from './Nose'
 import Glasses from './Glasses'
-import Mask from './Mask'
-
+import Hat from './Hat'
+import Flower from './flower'
+import Cat from './Cat'
+import Dog from './Dog'
 
 export default class CameraFilter extends React.Component {
   camera = null;
@@ -30,12 +31,6 @@ export default class CameraFilter extends React.Component {
       key: 0,
       faces: [],
       image: null,
-      photo: null,
-      photoId:'',
-
-
-
-
       type: Camera.Constants.Type.back,
       hasCameraPermission: null,
       hasStoragePermission: null
@@ -120,19 +115,19 @@ export default class CameraFilter extends React.Component {
     const filters = () =>{
       switch (this.state.key) {
         case 1:
-            return faces.map(face => <Glasses key={face.faceID} face={face} />)
+            return faces.map(face => <Dog key={face.faceID} face={face} />)
 
         case 2:
-            return faces.map(face => <Nose key={face.faceID} face={face} />)
+            return faces.map(face => <Cat key={face.faceID} face={face} />)
 
 		    case 3:
-            return faces.map(face => <Mask key={face.faceID} face={face} />)
+            return faces.map(face => <Hat key={face.faceID} face={face} />)
 
         case 4:
-            return faces.map(face => <Nose key={face.faceID} face={face} />)
+            return faces.map(face => <Flower key={face.faceID} face={face} />)
 
         case 5:
-            return faces.map(face => <Nose key={face.faceID} face={face} />)
+            return faces.map(face => <Glasses key={face.faceID} face={face} />)
           }
     }
 
@@ -166,7 +161,7 @@ export default class CameraFilter extends React.Component {
         <Row>
             <Col style={styles.alignCenter}>
                 <TouchableOpacity
-                    // onPress={this.Gallery}
+                    onPress={this.Gallery}
                     >
                     <Ionicons
                         name={'md-photos'}
@@ -211,7 +206,7 @@ export default class CameraFilter extends React.Component {
                 >
                     <Image
                         style={{width: 50, height: 70, borderColor: '#FFF', borderWidth: 0.5,borderRadius: 5}}
-                        source={require('../assets/dog.png')}
+                        source={require('../assets/dog_icon.png')}
                     />
                 </TouchableOpacity>
             </Col>
@@ -222,7 +217,7 @@ export default class CameraFilter extends React.Component {
 
                     <Image
                         style={{width: 50, height: 70, borderColor: '#FFF', borderWidth: 0.5,borderRadius: 5}}
-                        source={require('../assets/cat.png')}
+                        source={require('../assets/cat_icon.png')}
                     />
                 </TouchableOpacity>
             </Col>
@@ -235,7 +230,7 @@ export default class CameraFilter extends React.Component {
 
                     <Image
                         style={{width: 50, height: 70, borderColor: '#FFF', borderWidth: 0.5,borderRadius: 5}}
-                        source={require('../assets/buffalo.png')}
+                        source={require('../assets/hat_icon.png')}
                     />
                 </TouchableOpacity>
             </Col>
@@ -247,7 +242,7 @@ export default class CameraFilter extends React.Component {
 
                     <Image
                         style={{width: 50, height: 70, borderColor: '#FFF', borderWidth: 0.5,borderRadius: 5}}
-                        source={require('../assets/flower.png')}
+                        source={require('../assets/flower_icon.png')}
                     />
                 </TouchableOpacity>
             </Col>
@@ -259,7 +254,7 @@ export default class CameraFilter extends React.Component {
 
                    <Image
                         style={{width: 50, height: 70, borderColor: '#FFF', borderWidth: 0.5,borderRadius: 5}}
-                        source={require('../assets/glasses.png')}
+                        source={require('../assets/glasses_icon.png')}
                     />
                 </TouchableOpacity>
             </Col>

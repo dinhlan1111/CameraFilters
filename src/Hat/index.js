@@ -2,10 +2,9 @@ import React from 'react'
 
 import { Text, View, Image, YellowBox } from 'react-native';
 
-YellowBox.ignoreWarnings(['Warning: ...']);
-console.disableYellowBox = true;
 
-const Glasses = ({
+
+const Hat = ({
   face: {
     bounds: {
       size: { width: faceWidth, height: faceHeight }
@@ -14,8 +13,8 @@ const Glasses = ({
     rightEyePosition
   }
 }) => {
-  const glassesWidth = faceWidth
-  const glassesHeight = faceHeight / 3
+  const hatWidth = faceWidth * 1.6
+  const hatHeight = faceHeight *1.5
   const transformAngle = (
     angleRad = Math.atan(
       (rightEyePosition.y - leftEyePosition.y) /
@@ -25,14 +24,14 @@ const Glasses = ({
   return (
     <View style={{
       position: 'absolute',
-      left: leftEyePosition.x - glassesWidth * 0.7,
-      top: leftEyePosition.y - glassesHeight * 0.4
+      left: leftEyePosition.x - hatWidth * 0.56,
+      top: leftEyePosition.y - hatHeight * 0.77
     }}>
       <Image
-        source={require('../../assets/sunglasses.png')}
+        source={require('../../assets/hat.png')}
         style={{
-          width: glassesWidth,
-          height: glassesHeight,
+          width: hatWidth,
+          height: hatHeight,
           resizeMode: 'contain',
           transform: [{ rotate: `${transformAngle()}deg`}]
         }}
@@ -41,4 +40,4 @@ const Glasses = ({
   );
 };
 
-export default Glasses
+export default Hat
