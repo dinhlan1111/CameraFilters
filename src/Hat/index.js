@@ -13,8 +13,10 @@ const Hat = ({
     rightEyePosition
   }
 }) => {
-  const hatWidth = faceWidth * 1.6
-  const hatHeight = faceHeight *1.5
+  const hatWidth = faceWidth * 1.5
+  const hatHeight = faceHeight * 1.3
+
+  //Xoay
   const transformAngle = (
     angleRad = Math.atan(
       (rightEyePosition.y - leftEyePosition.y) /
@@ -22,10 +24,11 @@ const Hat = ({
     )
   ) => angleRad * 180 / Math.PI
   return (
+    //View filters
     <View style={{
       position: 'absolute',
-      left: leftEyePosition.x - hatWidth * 0.56,
-      top: leftEyePosition.y - hatHeight * 0.77
+      left: leftEyePosition.x - hatWidth * 0.35,
+      top: leftEyePosition.y - hatHeight * 0.8
     }}>
       <Image
         source={require('../../assets/hat.png')}

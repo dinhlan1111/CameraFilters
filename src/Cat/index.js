@@ -16,6 +16,8 @@ const Cat = ({
 }) => {
   const catWidth = faceWidth
   const catHeight = faceHeight
+
+  //Xoay
   const transformAngle = (
     angleRad = Math.atan(
       (rightEyePosition.y - leftEyePosition.y) /
@@ -23,10 +25,11 @@ const Cat = ({
     )
   ) => angleRad * 180 / Math.PI
   return (
+    //View fliters
     <View style={{
       position: 'absolute',
-      left: leftEyePosition.x - catWidth * 0.7,
-      top: leftEyePosition.y - catHeight * 0.45
+      left: leftEyePosition.x - catWidth * 0.33,
+      top: leftEyePosition.y - catHeight * 0.47
     }}>
       <Image
         source={require('../../assets/cat.png')}

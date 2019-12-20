@@ -5,7 +5,7 @@ import { Text, View, Image, YellowBox } from 'react-native';
 YellowBox.ignoreWarnings(['Warning: ...']);
 console.disableYellowBox = true;
 
-const Dog = ({
+const Dog1 = ({
   face: {
     bounds: {
       size: { width: faceWidth, height: faceHeight }
@@ -26,10 +26,10 @@ const Dog = ({
     <View style={{
       position: 'absolute',
       left: leftEyePosition.x - dogWidth * 0.33,
-      top: leftEyePosition.y - dogHeight * 0.45
+      top: leftEyePosition.y - dogHeight * 0.65
     }}>
       <Image
-        source={require('../../assets/dog.png')}
+        source={require('../../assets/dog1.png')}
         style={{
           width: dogWidth,
           height: dogHeight,
@@ -41,4 +41,4 @@ const Dog = ({
   );
 };
 
-export default Dog
+export default Dog1

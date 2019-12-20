@@ -13,7 +13,6 @@ export default StyleSheet.create({
         bottom: 0,
     },
 
-
      alignCenter: {
         flex: 1,
         alignItems: 'center',
@@ -24,6 +23,13 @@ export default StyleSheet.create({
         position: 'absolute',
         height: 150,
         bottom: 0,
+    },
+    topToolbar: {
+        width: winWidth,
+        position: 'absolute',
+        height: 50,
+        top: 30,
+        left: 335,
     },
     captureBtn: {
         width: 60,
@@ -47,11 +53,11 @@ export default StyleSheet.create({
     galleryContainer: {
         bottom: 100
     },
-    galleryImageContainer: {
-        width: 75,
-        height: 75,
-        marginRight: 5
+    filters: {
+        marginRight: 7.5,
+        marginLeft: 7.5
     },
+
     galleryImage: {
         width: 75,
         height: 75

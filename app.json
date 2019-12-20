@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "cameraandroid",
-    "slug": "camera",
+    "name": "iphone",
+    "slug": "iphone",
     "icon": "./assets/icon.png",
     "privacy": "public",
     "sdkVersion": "35.0.0",
@@ -11,12 +11,12 @@
       "web"
     ],
     "version": "1.0.0",
-    "android": {
-      "package": "com.uit.camerafilter"
-    },
     "ios": {
-      "bundleIdentifier": "com.uit.camerafilter"
+      "bundleIdentifier": "com.uit.camera"
     },
-    "description": "demo"
+    "android": {
+      "package": "com.uit.camera"
+    },
+    "description": "demo final"
   }
 }

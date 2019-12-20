@@ -16,6 +16,8 @@ const Flower = ({
 }) => {
   const flowerWidth = faceWidth * 1.2
   const flowerHeight = faceHeight / 2.5
+
+  //Xoay
   const transformAngle = (
     angleRad = Math.atan(
       (rightEyePosition.y - leftEyePosition.y) /
@@ -23,9 +25,10 @@ const Flower = ({
     )
   ) => angleRad * 180 / Math.PI
   return (
+    //View fliters
     <View style={{
       position: 'absolute',
-      left: leftEyePosition.x - flowerWidth * 0.7,
+      left: leftEyePosition.x - flowerWidth * 0.35,
       top: leftEyePosition.y - flowerHeight * 1.3
     }}>
       <Image
