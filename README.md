@@ -1,4 +1,4 @@
-# Camera 360
+# Camera Filters
 
 ## Intro
 
